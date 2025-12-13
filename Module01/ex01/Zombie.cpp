@@ -5,15 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/13 17:22:08 by dogs              #+#    #+#             */
-/*   Updated: 2025/12/13 17:22:09 by dogs             ###   ########.fr       */
+/*   Created: 2025/12/13 16:54:06 by dogs              #+#    #+#             */
+/*   Updated: 2025/12/13 17:14:06 by dogs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name)
-: _name(name)
+Zombie::Zombie()
 {}
 Zombie::~Zombie()
 {
@@ -23,4 +22,8 @@ void Zombie::announce(void) const
 {
     std::cout   << _name << ":  BraiiiiiiinnnzzzZ..."
                 << std::endl;
+}
+void Zombie::setName(std::string name)
+{
+    _name = name;
 }
