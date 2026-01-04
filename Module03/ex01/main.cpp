@@ -3,19 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmateo-v <jmateo-v@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:19:41 by jmateo-v          #+#    #+#             */
-/*   Updated: 2025/12/22 17:47:37 by jmateo-v         ###   ########.fr       */
+/*   Updated: 2026/01/04 18:54:18 by dogs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-
-#include "ClapTrap.hpp"
-#include <iostream>
-
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main()

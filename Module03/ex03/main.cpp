@@ -6,16 +6,10 @@
 /*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:19:41 by jmateo-v          #+#    #+#             */
-/*   Updated: 2025/12/29 14:25:56 by dogs             ###   ########.fr       */
+/*   Updated: 2026/01/04 18:52:28 by dogs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
-
-#include <iostream>
 #include "DiamondTrap.hpp"
 
 int main()
