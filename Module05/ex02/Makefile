@@ -1,14 +1,20 @@
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = forms
+NAME = abstractForms
 
 SRCS = Bureaucrat.cpp\
-	Form.cpp\
+	AForm.cpp\
+	ShrubberyCreationForm.cpp\
+	RobotomyRequestForm.cpp\
+	PresidentialPardonForm.cpp\
 	main.cpp
 
 HDRS = Bureaucrat.hpp\
-	Form.hpp
+	ShrubberyCreationForm.hpp\
+	RobotomyRequestForm.hpp\
+	PresidentialPardonForm.hpp\
+	AForm.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -24,6 +30,7 @@ $(NAME): $(OBJS)
 
 clean:
 	rm -f $(OBJS)
+	rm -f *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)

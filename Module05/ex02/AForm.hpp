@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jmateo-v <jmateo-v@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/15 11:56:10 by dogs              #+#    #+#             */
-/*   Updated: 2026/02/15 13:13:16 by dogs             ###   ########.fr       */
+/*   Updated: 2026/02/16 17:11:51 by jmateo-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <exception>
 #include <ostream>
 
-class Form
+class AForm
 {
 private:
     std::string const _name;
@@ -26,11 +26,11 @@ private:
     const int _signReq;
     const int _execReq;
 public:
-    Form();
-    Form(const std::string& name, const int signReq, const int execReq);
-    Form(const Form& other);
-    Form& operator=(const Form& other);
-    ~Form();
+    AForm();
+    AForm(const std::string& name, const int signReq, const int execReq);
+    AForm(const AForm& other);
+    AForm& operator=(const AForm& other);
+    virtual ~AForm();
 
     const std::string& getName() const;
     bool isSigned() const;
@@ -42,16 +42,21 @@ public:
 
     class GradeTooHighException : public std::exception
     {
-        public:
+    public:
         const char *what() const throw();
     };
     class GradeTooLowException : public std::exception
     {
-        public:
+    public:
+        const char *what() const throw();
+    };
+    class FormNotSignedException : public std::exception
+    {
+    public:
         const char *what() const throw();
     };
 };
 
-std::ostream& operator<<(std::ostream& os, const Form& f);
+std::ostream& operator<<(std::ostream& os, const AForm& f);
 
 #endif

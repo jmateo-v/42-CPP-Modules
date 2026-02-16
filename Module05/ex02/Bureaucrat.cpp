@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: jmateo-v <jmateo-v@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/09 13:24:05 by dogs              #+#    #+#             */
-/*   Updated: 2026/02/15 13:01:54 by dogs             ###   ########.fr       */
+/*   Updated: 2026/02/16 15:03:38 by jmateo-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <iostream>
 Bureaucrat::Bureaucrat() :_name("Default"), _grade(150)
 {}
@@ -52,7 +52,7 @@ void Bureaucrat::decreaseGrade()
     _grade++;
 }
 
-void Bureaucrat::signForm(Form& f)
+void Bureaucrat::signForm(AForm& f)
 {
     try
     {
@@ -63,6 +63,20 @@ void Bureaucrat::signForm(Form& f)
     {
         std::cout << _name << " couldn't sign " << f.getName()
         << " because " << e.what() << std::endl;
+    }
+}
+void Bureaucrat::executeForm(AForm const& f) const
+{
+    try
+    {
+        f.execute(*this);
+        std::cout << getName() << " executed " << f.getName() << std::endl; 
+    }
+        
+    catch (std::exception &e)
+    {
+        std::cout << getName() << " couldn’t execute "
+        << f.getName() << " because " << e.what() << std::endl;
     }
 }
 
