@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmateo-v <jmateo-v@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: dogs <dogs@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 17:52:25 by jmateo-v          #+#    #+#             */
-/*   Updated: 2026/02/16 19:36:27 by jmateo-v         ###   ########.fr       */
+/*   Updated: 2026/02/17 11:15:58 by dogs             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ static void handleInt(const std::string& s)
 	else
 		std::cout << "char: Non displayable\n";
 	std::cout << "int: " << i << "\n";
-	std::cout << "float: " << static_cast<float>(i) << "\n";
+	std::cout << "float: " << static_cast<float>(i) << "f\n";
 	std::cout << "double: " << static_cast<double>(i) << "\n";
 }
 static void handleFloat(const std::string &s)
